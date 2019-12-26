@@ -1,0 +1,25 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=32340bc2-01  /boot           vfat    defaults          0       2
+PARTUUID=32340bc2-02  /               ext4    defaults,noatime  0       1
+
+
+# --------------------------------------------------------
+# EXT HDD
+/dev/sda2   /media/pidrive  ntfs-3g uid=pi,gid=pi
+
+# NAS
+
+# WD
+//192.168.86.31/Public /home/pi/mnt/WD cifs username=admin,password=,x-systemd.automount 0 0     
+
+# LG
+//192.168.86.33/service/DLNA /home/pi/mnt/LG/ cifs username=admin,password=admin, 0 0
+
+# --------------------------------------------------------
+
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+
+# input file => dictionnary
+
+
