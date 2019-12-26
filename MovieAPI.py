@@ -16,8 +16,7 @@ class MovieAPI:
                 }
         try:
             res = requests.request("GET", self.url, params=params).text
-            #print(req)
-            #res = json.load(req)
+            res = json.loads(res)
         except:
             res = None
         return res
@@ -33,4 +32,4 @@ if __name__ == "__main__":
     resp = req.title_request(title)
     print(resp)
     print(type(resp))
-    json.load(resp)
+    #json.load(resp)
